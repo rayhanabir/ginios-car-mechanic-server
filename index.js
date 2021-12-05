@@ -8,6 +8,7 @@ const app = express()
 const port =process.env.PORT || 5000;
 
 
+
 //middelware
 
 app.use(cors())
@@ -73,6 +74,10 @@ run().catch(console.dir)
 
 app.get('/', (req, res)=>{
     res.send('runnig genius car server')
+});
+
+app.get('/hello', (req, res)=>{
+    res.send('hello from node side')
 })
 
 app.listen(port, ()=>{
